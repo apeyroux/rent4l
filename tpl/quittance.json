@@ -1,0 +1,31 @@
+{
+	"type":"edf",
+	"amount":120.0,	
+	"tenant" : {
+		"name":"Tenant Jr",
+		"firstname":"FirstName-Tenant",
+		"tel":"0600000001",
+		"mail":"f.tenant@ifup.sh",
+		"address": {
+			"number":"88l",
+			"street":"Av Victor du loca",
+			"city":"Paris",
+			"cp":92320
+		}
+	},
+	"owner" : {
+		"name":"MyName",
+		"firstname":"MyFirstName",
+		"tel":"0612121212",
+		"mail":"f.name@ifup.sh",
+		"address": {
+			"number":"88",
+			"street":"Av Victor du owner",
+			"city":"Paris",
+			"cp":92140
+		}
+	},
+	"rent": {
+		"descrition":"Location Victor Hugo"
+	}
+}
