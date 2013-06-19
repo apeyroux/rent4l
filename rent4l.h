@@ -15,7 +15,9 @@ typedef struct address_s address_t;
 
 struct report_s {
     report_type_t type;
-    double amount;
+    double rent_amount;
+    double edf_amount;
+    double water_amount;
     person_t *owner_p;
     person_t *tenant_p;
 };
@@ -38,3 +40,5 @@ struct address_s {
 
 report_t *initReportFromJsonTplFile(char *tplPath);
 person_t *initPersonFromJsonTpl(json_t *json_p, person_type_t type);
+int report2pdf(report_t *report_p, char *reportPath);
+void freeReport(report_t *report_p);

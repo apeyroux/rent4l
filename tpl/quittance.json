@@ -1,6 +1,8 @@
 {
-	"type":"edf",
-	"amount":120.0,	
+	"type":"rent_receipt",
+	"rent_amount":120.0,	
+    "edf_amount":5.5,
+    "water_amount":10.0,
 	"tenant" : {
 		"name":"Tenant Jr",
 		"firstname":"FirstName-Tenant",
