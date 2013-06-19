@@ -10,7 +10,7 @@
 			"number":"88l",
 			"street":"Av Victor du loca",
 			"city":"Paris",
-			"cp":92320
+			"cp":"92320"
 		}
 	},
 	"owner" : {
@@ -22,7 +22,7 @@
 			"number":"88",
 			"street":"Av Victor du owner",
 			"city":"Paris",
-			"cp":92140
+			"cp":"92140"
 		}
 	},
 	"rent": {

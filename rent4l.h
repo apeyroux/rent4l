@@ -9,7 +9,7 @@
 
 typedef int person_type_t;
 typedef int report_type_t;
-typedef struct report_s report_p;
+typedef struct report_s report_t;
 typedef struct person_s person_t;
 typedef struct address_s address_t;
 
@@ -17,7 +17,7 @@ struct report_s {
     report_type_t type;
     double amount;
     person_t *owner_p;
-    person_t *rent_p;
+    person_t *tenant_p;
 };
 
 struct person_s {
@@ -33,8 +33,8 @@ struct address_s {
     const char *number;
     const char *street;
     const char *city;
-    const int cp;
+    const char *cp;
 };
 
-int useTemplate(char *tplPath);
+report_t *initReportFromJsonTplFile(char *tplPath);
 person_t *initPersonFromJsonTpl(json_t *json_p, person_type_t type);
