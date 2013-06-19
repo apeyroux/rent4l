@@ -1,3 +1,6 @@
 language: c
 install: make
 compiler: gcc
+before_install:
+    - sudo apt-get update -qq
+    - sudo apt-get install -qq libhpdf-dev libjansson-dev
