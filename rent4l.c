@@ -21,7 +21,7 @@ report_t *
 initReportFromJsonTplFile(char *tplPath)
 {
     json_t *json_p = NULL;
-   	json_error_t jsonError;
+    json_error_t jsonError;
     report_t *report_p = NULL;
     person_t *owner_p = NULL;
     person_t *tenant_p = NULL;
@@ -234,7 +234,7 @@ void
 printAddress(HPDF_Page page, report_t *report_p){
         char buf[16];
         int len;
-        char *addr;
+        char *addr = NULL;
         if((len = snprintf(buf, 16, "%s %s\n%s %s", report_p->tenant_p->address->number, report_p->tenant_p->address->street, report_p->tenant_p->address->cp,  report_p->tenant_p->address->city)))
                     if((addr = malloc((len+1)*sizeof(char))))
                         snprintf(addr, len+1, "%s %s\n%s %s", report_p->tenant_p->address->number, report_p->tenant_p->address->street, report_p->tenant_p->address->cp, report_p->tenant_p->address->city);
@@ -245,9 +245,9 @@ void
 printRecap(HPDF_Page page, report_t *report_p) {
     char buf[16];
     int len;
-    char *rentAmount;
-    char *edfAmount;
-    char *waterAmount;
+    char *rentAmount = NULL;
+    char *edfAmount = NULL;
+    char *waterAmount = NULL;
 
     if((len = snprintf(buf, 16, "- Loyer : %.2f Euro\n", report_p->rent_amount)))
         if((rentAmount = malloc((len+1)*sizeof(char))))
