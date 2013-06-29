@@ -316,7 +316,7 @@ report2pdf(report_t *report_p, char *reportPath)
 			pageTitle = "Quittance de loyer";
             char buf[16];
             int len;
-            if ((len = snprintf(buf, 16, "        Nous, %s %s bailleur du %s %s à %s (%s) reconnaissons avoir bien reçu un chèque d'un montant de %0.2f Euro de la part de %s %s afin d'acquitter le montant du loyer du mois de XXX et lui en donne quittance, sous réserve de tous nos droits. Ce montant ce réparti de la façon suivante :", report_p->owner_p->firstname,  
+            if ((len = snprintf(buf, 16, "        Nous, %s %s bailleurs du %s %s à %s (%s) reconnaissons avoir bien reçu un chèque d'un montant de %0.2f Euro de la part de %s %s afin d'acquitter le montant du loyer du mois de __________ et lui en donnons quittance, sous réserve de tous nos droits. Ce montant ce réparti de la façon suivante :", report_p->owner_p->firstname,  
                             report_p->owner_p->name, 
                             report_p->tenant_p->address->number,
                             report_p->tenant_p->address->street,
@@ -326,7 +326,7 @@ report2pdf(report_t *report_p, char *reportPath)
                             report_p->tenant_p->firstname, 
                             report_p->tenant_p->name)) >= 16) 
                 if((content = malloc((len + 1) * sizeof(char))))
-                    snprintf(content, len + 1, "        Nous, %s %s bailleur du %s %s à %s (%s) reconnaissons avoir bien reçu un chèque d'un montant de %0.2f Euro de la part de %s %s afin d'acquitter le montant du loyer du mois de XXX et lui en donne quittance, sous réserve de tous nos droits. Ce montant ce réparti de la façon suivante :", report_p->owner_p->firstname,  
+                    snprintf(content, len + 1, "        Nous, %s %s bailleurs du %s %s à %s (%s) reconnaissons avoir bien reçu un chèque d'un montant de %0.2f Euro de la part de %s %s afin d'acquitter le montant du loyer du mois de __________ et lui en donnons quittance, sous réserve de tous nos droits. Ce montant ce réparti de la façon suivante :", report_p->owner_p->firstname,  
                             report_p->owner_p->name, 
                             report_p->tenant_p->address->number,
                             report_p->tenant_p->address->street,
